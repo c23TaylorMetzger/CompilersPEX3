@@ -1,0 +1,2 @@
+﻿gyro
+gyro {var = 10}

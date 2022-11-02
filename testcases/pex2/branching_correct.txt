@@ -1,0 +1,6 @@
+﻿if {varname <= 10 AND x + y = 10 * 2}[
+	int variable...
+]
+then [
+	y is 17...
+]

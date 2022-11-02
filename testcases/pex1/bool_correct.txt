@@ -1,0 +1,5 @@
+﻿AND
+OR
+NOT
+AND OR NOT
+true AND true OR false NOT false

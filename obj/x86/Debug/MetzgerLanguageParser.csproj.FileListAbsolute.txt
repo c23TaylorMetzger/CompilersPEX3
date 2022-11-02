@@ -1,0 +1,8 @@
+F:\Documents\SCHOOL\COMPSCI\CS426\PEX2\bin\Debug\ConsoleApplication.exe.config
+F:\Documents\SCHOOL\COMPSCI\CS426\PEX2\bin\Debug\ConsoleApplication.exe
+F:\Documents\SCHOOL\COMPSCI\CS426\PEX2\bin\Debug\ConsoleApplication.pdb
+F:\Documents\SCHOOL\COMPSCI\CS426\PEX2\obj\x86\Debug\MetzgerLanguageParser.csproj.AssemblyReference.cache
+F:\Documents\SCHOOL\COMPSCI\CS426\PEX2\obj\x86\Debug\MetzgerLanguageParser.csproj.SuggestedBindingRedirects.cache
+F:\Documents\SCHOOL\COMPSCI\CS426\PEX2\obj\x86\Debug\MetzgerLanguageParser.csproj.CoreCompileInputs.cache
+F:\Documents\SCHOOL\COMPSCI\CS426\PEX2\obj\x86\Debug\ConsoleApplication.exe
+F:\Documents\SCHOOL\COMPSCI\CS426\PEX2\obj\x86\Debug\ConsoleApplication.pdb

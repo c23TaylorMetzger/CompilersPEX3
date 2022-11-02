@@ -1,0 +1,3 @@
+﻿gyro {variable > 7} [
+	x is 17...
+]

@@ -1,0 +1,3 @@
+﻿helper Circumference {y = 5; var = varname} [
+	int x...
+]

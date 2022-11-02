@@ -1,0 +1,6 @@
+﻿helper
+;
+nucleus
+helper FuncName {int var1; int var2; int var3}
+nucleus {str param; int param2}
+nucleus {}

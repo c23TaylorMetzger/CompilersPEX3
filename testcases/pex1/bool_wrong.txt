@@ -1,0 +1,5 @@
+﻿AN
+NO
+and
+or
+not

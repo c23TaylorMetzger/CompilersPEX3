@@ -1,0 +1,6 @@
+﻿int
+str
+float
+const
+str Variable is int Type
+const float PI is 3.14...

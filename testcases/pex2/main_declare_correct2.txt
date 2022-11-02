@@ -1,0 +1,3 @@
+﻿nucleus {y = 5; var = varname} [
+	int x...
+]

@@ -1,0 +1,145 @@
+// This tells SableCC to put all of the code in a package called CS426
+Package CS426;
+
+// Helpers are sets that let you talk about multiple characters in the same way
+Helpers
+	whitespaces = ' ' | 9 | 10 | 13;
+	natural = ['1'..'9'];
+	whole = ['0' + natural];
+	letter = [['a'..'z'] + ['A'..'Z']];
+
+// PEX 1 - Lexer Portion
+Tokens
+	// End of Line
+	eol = '...';
+
+	// Assignment
+	assign = 'is';
+
+	// Comments
+	comment = '//' ([[0..0xffff] - [10 + 13]])*;
+
+	// Whitespace
+	blank = whitespaces+;
+
+	// Mathematics
+	plus = '+';
+	minus = '-';
+	mult = '*';
+	div = '/';
+	leftparent = '(';
+	rightparent = ')';
+
+	// Boolean
+	and = 'AND';
+	or = 'OR';
+	not = 'NOT';
+
+	// Declarations
+	intdec = 'int';
+	strdec = 'str';
+	floatdec = 'float';
+	constdec = 'const';
+
+	// Branching
+	if = 'if';
+	leftcurl = '{';
+	rightcurl = '}';
+	leftsquare = '[';
+	rightsquare = ']';
+	then = 'then';
+
+	// Comparison
+	grtr = '>';
+	grtreq = '>=';
+	equal = '=';
+	less = '<';
+	lesseq = '<=';
+
+	// Iteration
+	loop = 'gyro';
+
+	// Functions
+	func = 'helper';
+	param = ';';
+	main = 'nucleus';
+
+	// Identifiers (variables, function names)
+	id = letter+ whole* ('_' (letter | whole)+)* (letter | whole)*;
+
+	// Literals
+	integer = natural whole* | '0';
+	float = (natural whole* | '0') '.' (whole whole*); 
+	// Exponential (Engineering Notation)
+	engin =  (natural whole* | '0') '.' (whole whole*) 'e' ('+' | '-') (natural whole* | '0');
+
+	// Strings and escape character
+	string = '"' (letter | ' ')* ('#' ([[0..0xffff] - [10 + 13]]))* (letter | ' ')* '"';
+
+Ignored Tokens
+	blank, comment;
+
+
+// PEX 2 - Parser Portion
+Productions
+	program = statements;
+	statements = {multiple} statement statements | {single} ;
+	statement = {declaration_statement} declaration | {function_call_statement} function_call | {assign_statement} assignment | {branching_statement} branch | {iteration_statement} iterate | {helper_function_declare} helper_declare | {main_function_declare} main_declare;
+
+	// Declaration statement
+	declaration = type id eol;
+	type = {int} intdec | {str} strdec | {float} floatdec | {const} constdec type;
+	
+	// Function Calls
+	function_call = id leftparent parameters rightparent eol;
+	parameters = {multiple} parameter param parameters | {single} parameter;
+	parameter = {math} expression | {logic} comparison | {empty} ;
+	
+	// Assignment statement
+	assignment = id assign expression eol;
+	expression = {add} expression plus expression2 | {subtract} expression minus expression2 | {pass} expression2;
+	expression2 = {multiply} expression2 mult expression3 | {divide} expression2 div expression3 | {pass} expression3;
+	expression3 = {parenthesis} leftparent expression rightparent | {pass} expression4;
+	expression4 = {negative} minus operand | {pass} operand;
+	operand = {integer} integer | {float} float | {engineering} engin | {string} string | {variable} id;
+	
+	// Branching statement
+	branch = if if_curls if_squares then then_squares;
+	if_curls = leftcurl logical rightcurl;
+	if_squares = leftsquare statements rightsquare;
+	then_squares = leftsquare statements rightsquare;
+
+	logical = {complex_logical_expression} logical boolean comparison | {single_logical_expression} comparison;
+
+	// Comparison Expressions
+	comparison = [left_hand_expression]:expression operator [right_hand_expression]:expression;
+	operator = {greater_than} grtr | {greater_equal} grtreq | {equal} equal | {less_than} less | {less_equal} lesseq;
+
+	// Booleans
+	boolean = {and} and | {or} or | {not} not;
+
+	// Iteration/Loops
+	iterate = loop leftcurl logical rightcurl leftsquare statements rightsquare;
+
+	// Helper Function Declaration
+	helper_declare = func id leftcurl parameters rightcurl leftsquare statements rightsquare;
+
+	// Main Function Declaration
+	main_declare = main leftcurl parameters rightcurl leftsquare statements rightsquare;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

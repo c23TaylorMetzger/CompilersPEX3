@@ -1,1 +1,7 @@
-﻿
+﻿helper funct {} [
+	int y...
+]
+
+nucleus {} [
+	int x...
+]

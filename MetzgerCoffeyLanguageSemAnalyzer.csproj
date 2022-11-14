@@ -51,6 +51,7 @@
     <Compile Include="parser.cs" />
     <Compile Include="prods.cs" />
     <Compile Include="main.cs" />
+    <Compile Include="SemanticAnalyzer.cs" />
     <Compile Include="tokens.cs" />
   </ItemGroup>
   <ItemGroup>

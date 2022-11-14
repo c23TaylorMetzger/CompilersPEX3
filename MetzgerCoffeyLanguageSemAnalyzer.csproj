@@ -110,6 +110,7 @@
     <Content Include="testcases\pex2\function_call_correct.txt" />
     <Content Include="testcases\pex2\assign_simple_correct.txt" />
     <Content Include="testcases\pex2\declaration_correct.txt" />
+    <Content Include="testcases\pex3\test1.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -120,7 +121,6 @@
     <None Include="README.parser" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="testcases\pex3\" />
     <Folder Include="testcases\pex4\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />

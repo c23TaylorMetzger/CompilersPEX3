@@ -138,6 +138,9 @@ class TestParser
             Parser p = new Parser(l);
             Start s = p.Parse();
 
+            SemanticAnalyzer sa = new SemanticAnalyzer();
+            s.Apply(sa);
+
             TextPrinter printer = new TextPrinter();
             if (args.Length > 0 && args[0] == "-ansi")
                 printer.SetColor(true);

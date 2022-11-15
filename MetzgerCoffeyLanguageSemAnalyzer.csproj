@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="analysis.cs" />
+    <Compile Include="Definition.cs" />
     <Compile Include="lexer.cs" />
     <Compile Include="nodes.cs" />
     <Compile Include="parser.cs" />

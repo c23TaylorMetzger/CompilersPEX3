@@ -25,6 +25,12 @@ namespace CS426.analysis
 
     public class BooleanDefinition : Definition { }
 
+    public class FloatDefinition : TypeDefinition { }
+
+    public class ConstDefinition : TypeDefinition { }
+
+    //public class EnginDefinition : TypeDefinition { }
+
     public class VariableDefinition : Definition
     {
         public TypeDefinition variableType;

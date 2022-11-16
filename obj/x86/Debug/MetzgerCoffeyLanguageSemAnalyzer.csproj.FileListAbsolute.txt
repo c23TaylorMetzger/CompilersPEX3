@@ -6,3 +6,10 @@ F:\Documents\SCHOOL\COMPSCI\CS426\PEX3\obj\x86\Debug\MetzgerCoffeyLanguageSemAna
 F:\Documents\SCHOOL\COMPSCI\CS426\PEX3\obj\x86\Debug\MetzgerCoffeyLanguageSemAnalyzer.csproj.CoreCompileInputs.cache
 F:\Documents\SCHOOL\COMPSCI\CS426\PEX3\obj\x86\Debug\ConsoleApplication.exe
 F:\Documents\SCHOOL\COMPSCI\CS426\PEX3\obj\x86\Debug\ConsoleApplication.pdb
+C:\Users\coffe\OneDrive\Documents\CompilersPEX3\bin\Debug\ConsoleApplication.exe.config
+C:\Users\coffe\OneDrive\Documents\CompilersPEX3\bin\Debug\ConsoleApplication.exe
+C:\Users\coffe\OneDrive\Documents\CompilersPEX3\bin\Debug\ConsoleApplication.pdb
+C:\Users\coffe\OneDrive\Documents\CompilersPEX3\obj\x86\Debug\MetzgerCoffeyLanguageSemAnalyzer.csproj.AssemblyReference.cache
+C:\Users\coffe\OneDrive\Documents\CompilersPEX3\obj\x86\Debug\MetzgerCoffeyLanguageSemAnalyzer.csproj.CoreCompileInputs.cache
+C:\Users\coffe\OneDrive\Documents\CompilersPEX3\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\coffe\OneDrive\Documents\CompilersPEX3\obj\x86\Debug\ConsoleApplication.pdb

@@ -7,104 +7,79 @@ type NUL>%file%
 ----------------------------------------
  TITLE
 ----------------------------------------
-echo PEX TEST CASES (C1C Metzger) >> %file%
+echo PEX TEST CASES (C1C Metzger and C1C Coffey) >> %file%
 
 echo ---------------------------------------- >> %file%
 echo GOOD EXAMPLES >> %file%
 echo ---------------------------------------- >> %file%
 
-echo ----------Testing Declaration Statements---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\declaration_correct.txt >> %file%
+echo ----------Testing Declaration Decoration for Variables---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\VariableNodeDecorationCorrect.txt >> %file%
 echo. >> %file%
 
-echo ----------Testing Function Call Statements---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\function_call_correct.txt >> %file%
-echo. >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\function_call_correct2.txt >> %file%
+echo ----------Initialize an Integer Variable with a Negative Int---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\NegativeIntegerCorrect.txt >> %file%
 echo. >> %file%
 
-echo ----------Testing Assignment Statements---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_simple_correct.txt >> %file%
-echo. >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_advanced_correct.txt >> %file%
-echo. >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_add_subtract_correct.txt >> %file%
-echo. >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_mult_div_correct.txt >> %file%
-echo. >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_parenthesis_correct.txt >> %file%
-echo. >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_complex_negative_correct.txt >> %file%
+echo ----------Initialize a Variable with Correct Parentheses---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\ParenthesesCorrect.txt >> %file%
 echo. >> %file%
 
-echo ----------Testing Branching Statements---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\branching_correct.txt >> %file%
+echo ----------Initialize a Variable with Correct Multiplication---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\MultiplyCorrect.txt >> %file%
 echo. >> %file%
 
-echo ----------Testing Looping Statements---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\iteration_correct.txt >> %file%
+echo ----------Initialize a Variable with Correct Division---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\DivideCorrect.txt >> %file%
 echo. >> %file%
 
-echo ----------Testing Declarations of Helper Functions---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\helper_declare_correct.txt >> %file%
+echo ----------Initialize a Variable with Correct Addition---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\AddCorrect.txt >> %file%
 echo. >> %file%
 
-echo ----------Testing Declarations of the Main Function---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\main_declare_correct.txt >> %file%
+echo ----------Initialize a Variable with Correct Subtraction---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\SubtractCorrect.txt >> %file%
 echo. >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\main_declare_correct2.txt >> %file%
-echo. >> %file%
+
 
 echo ---------------------------------------- >> %file%
 echo BAD EXAMPLES >> %file%
 echo ---------------------------------------- >> %file%
 
-echo ----------Running Incorrect Declaratin Statement---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\declaration_incorrect.txt >> %file%
+echo ----------Variable not Declared but Attempted to Initialize---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\VariableNotDeclared.txt >> %file%
 echo. >> %file%
 
-echo ----------Running Incorrect Simple Assignment---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_simple_incorrect.txt >> %file%
+echo ----------Variable not found in Local Symbol Table---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\VariableNotInLocalSymbolTable.txt >> %file%
 echo. >> %file%
 
-echo ----------Running Incorrect Advanced Assignment---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_advanced_incorrect.txt >> %file%
+echo ----------Initializing a Variable with a Negative String---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\NonIntegerNegative.txt >> %file%
 echo. >> %file%
 
-echo ----------Running Incorrect Addition Subtraction Assignment---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_add_subtract_incorrect.txt >> %file%
+echo ----------Initializing with a String inside Parentheses---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\StringInParentheses.txt >> %file%
 echo. >> %file%
 
-echo ----------Running Incorrect Multiplication and Division Assignment---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_mult_div_incorrect.txt >> %file%
+echo ----------Initializing with Multiplication of Mismatched Types---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\MultiplyMismatchTypes.txt >> %file%
 echo. >> %file%
 
-echo ----------Running Incorrect Parenthesis Assignment---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_parenthesis_incorrect.txt >> %file%
+echo ----------Initializing with Division of Mismatched Types---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\DivideMismatchTypes.txt >> %file%
 echo. >> %file%
 
-echo ----------Running Incorrect Complex Negative Assignment---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\assign_complex_negative_incorrect.txt >> %file%
+echo ----------Initializing with Addition of Mismatched Types---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\AddMismatchTypes.txt >> %file%
 echo. >> %file%
 
-echo ----------Running Incorrect Function Call---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\function_call_incorrect.txt >> %file%
+echo ----------Initializing with Subtraction of Mismatched Types---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\SubtractMismatchTypes.txt >> %file%
 echo. >> %file%
 
-echo ----------Running Incorrect Branch Structure---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\branching_incorrect.txt >> %file%
-echo. >> %file%
-
-echo ----------Running Incorrect While Loop Structure---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\iteration_incorrect.txt >> %file%
-echo. >> %file%
-
-echo ----------Running Incorrect Helper Function Declare---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\helper_declare_incorrect.txt >> %file%
-echo. >> %file%
-
-echo ----------Running Incorrect Main Function Declare---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex2\main_declare_incorrect.txt >> %file%
+echo ----------Initializing with a Type that Does Not Exist---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\TypeDoesNotExist.txt >> %file%
 echo. >> %file%
 
 pause

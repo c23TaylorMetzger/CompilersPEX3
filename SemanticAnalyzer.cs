@@ -82,7 +82,7 @@ namespace CS426.analysis
 
             if (!localSymbolTable.TryGetValue(varName, out varDefinition))
             {
-                PrintWarning(node.GetId(), varName + "does not exit!");
+                PrintWarning(node.GetId(), varName + " does not exist!");
             }
             else if (!(varDefinition is VariableDefinition))
             {

@@ -6,7 +6,7 @@
     <OutputType>Exe</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>ConsoleApplication</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -112,7 +112,22 @@
     <Content Include="testcases\pex2\function_call_correct.txt" />
     <Content Include="testcases\pex2\assign_simple_correct.txt" />
     <Content Include="testcases\pex2\declaration_correct.txt" />
-    <Content Include="testcases\pex3\test1.txt" />
+    <Content Include="testcases\pex3\TypeDoesNotExist.txt" />
+    <Content Include="testcases\pex3\SubtractMismatchTypes.txt" />
+    <Content Include="testcases\pex3\SubtractCorrect.txt" />
+    <Content Include="testcases\pex3\AddCorrect.txt" />
+    <Content Include="testcases\pex3\DivideCorrect.txt" />
+    <Content Include="testcases\pex3\AddMismatchTypes.txt" />
+    <Content Include="testcases\pex3\DivideMismatchTypes.txt" />
+    <Content Include="testcases\pex3\MultiplyMismatchTypes.txt" />
+    <Content Include="testcases\pex3\MultiplyCorrect.txt" />
+    <Content Include="testcases\pex3\ParenthesesCorrect.txt" />
+    <Content Include="testcases\pex3\StringInParentheses.txt" />
+    <Content Include="testcases\pex3\NonIntegerNegative.txt" />
+    <Content Include="testcases\pex3\NegativeIntegerCorrect.txt" />
+    <Content Include="testcases\pex3\VariableNodeDecorationCorrect.txt" />
+    <Content Include="testcases\pex3\VariableNotDeclared.txt" />
+    <Content Include="testcases\pex3\VariableNotInLocalSymbolTable.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

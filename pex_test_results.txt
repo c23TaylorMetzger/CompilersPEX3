@@ -1,39 +1,806 @@
-PEX TEST CASES (C1C Metzger) 
+PEX TEST CASES (C1C Metzger and C1C Coffey) 
 ---------------------------------------- 
 GOOD EXAMPLES 
 ---------------------------------------- 
-----------Testing Declaration Statements---------- 
+----------Testing Declaration Decoration for Variables---------- 
 
 - AProgram
      `- AMultipleStatements
-        |- ADeclarationStatementStatement
-        |  `- ADeclaration
-        |     |- AIntType
-        |     |  `- int
-        |     |- x
-        |     `- ...
-        `- AMultipleStatements
-           |- ADeclarationStatementStatement
-           |  `- ADeclaration
-           |     |- AFloatType
-           |     |  `- float
-           |     |- x
-           |     `- ...
-           `- AMultipleStatements
-              |- ADeclarationStatementStatement
-              |  `- ADeclaration
-              |     |- AStrType
-              |     |  `- str
-              |     |- x
-              |     `- ...
-              `- AMultipleStatements
-                 `- ADeclarationStatementStatement
-                 |  `- ADeclaration
-                 |     |- AConstType
-                 |     |  |- const
-                 |     |  `- AIntType
-                 |     |     `- int
-                 |     |- x
-                 |     `- ...
-                 `- ASingleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- APassExpression4
+        |     |     |     |           `- AIntegerOperand
+        |     |     |     |              `- 5
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
 
+ 
+----------Initialize an Integer Variable with a Negative Int---------- 
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- ANegativeExpression4
+        |     |     |     |           |- -
+        |     |     |     |           `- AIntegerOperand
+        |     |     |     |              `- 5
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initialize a Variable with Correct Parentheses---------- 
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- AParenthesisExpression3
+        |     |     |     |        |- (
+        |     |     |     |        |- APassExpression
+        |     |     |     |        |  `- APassExpression2
+        |     |     |     |        |     `- APassExpression3
+        |     |     |     |        |        `- APassExpression4
+        |     |     |     |        |           `- AIntegerOperand
+        |     |     |     |        |              `- 6
+        |     |     |     |        `- )
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initialize a Variable with Correct Multiplication---------- 
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- AParenthesisExpression3
+        |     |     |     |        |- (
+        |     |     |     |        |- APassExpression
+        |     |     |     |        |  `- AMultiplyExpression2
+        |     |     |     |        |     |- APassExpression2
+        |     |     |     |        |     |  `- APassExpression3
+        |     |     |     |        |     |     `- APassExpression4
+        |     |     |     |        |     |        `- AIntegerOperand
+        |     |     |     |        |     |           `- 6
+        |     |     |     |        |     |- *
+        |     |     |     |        |     `- APassExpression3
+        |     |     |     |        |        `- APassExpression4
+        |     |     |     |        |           `- AVariableOperand
+        |     |     |     |        |              `- x
+        |     |     |     |        `- )
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initialize a Variable with Correct Division---------- 
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- AParenthesisExpression3
+        |     |     |     |        |- (
+        |     |     |     |        |- APassExpression
+        |     |     |     |        |  `- ADivideExpression2
+        |     |     |     |        |     |- APassExpression2
+        |     |     |     |        |     |  `- APassExpression3
+        |     |     |     |        |     |     `- APassExpression4
+        |     |     |     |        |     |        `- AIntegerOperand
+        |     |     |     |        |     |           `- 6
+        |     |     |     |        |     |- /
+        |     |     |     |        |     `- APassExpression3
+        |     |     |     |        |        `- APassExpression4
+        |     |     |     |        |           `- AVariableOperand
+        |     |     |     |        |              `- x
+        |     |     |     |        `- )
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initialize a Variable with Correct Addition---------- 
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- AParenthesisExpression3
+        |     |     |     |        |- (
+        |     |     |     |        |- AAddExpression
+        |     |     |     |        |  |- APassExpression
+        |     |     |     |        |  |  `- APassExpression2
+        |     |     |     |        |  |     `- APassExpression3
+        |     |     |     |        |  |        `- APassExpression4
+        |     |     |     |        |  |           `- AIntegerOperand
+        |     |     |     |        |  |              `- 6
+        |     |     |     |        |  |- +
+        |     |     |     |        |  `- APassExpression2
+        |     |     |     |        |     `- APassExpression3
+        |     |     |     |        |        `- APassExpression4
+        |     |     |     |        |           `- AVariableOperand
+        |     |     |     |        |              `- x
+        |     |     |     |        `- )
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initialize a Variable with Correct Subtraction---------- 
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- AParenthesisExpression3
+        |     |     |     |        |- (
+        |     |     |     |        |- ASubtractExpression
+        |     |     |     |        |  |- APassExpression
+        |     |     |     |        |  |  `- APassExpression2
+        |     |     |     |        |  |     `- APassExpression3
+        |     |     |     |        |  |        `- APassExpression4
+        |     |     |     |        |  |           `- AIntegerOperand
+        |     |     |     |        |  |              `- 6
+        |     |     |     |        |  |- -
+        |     |     |     |        |  `- APassExpression2
+        |     |     |     |        |     `- APassExpression3
+        |     |     |     |        |        `- APassExpression4
+        |     |     |     |        |           `- AVariableOperand
+        |     |     |     |        |              `- x
+        |     |     |     |        `- )
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+---------------------------------------- 
+BAD EXAMPLES 
+---------------------------------------- 
+----------Variable not Declared but Attempted to Initialize---------- 
+Line 3, Col 2: Identifier x does not exist
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  `- AAssignStatementStatement
+        |     |  |  `- AAssignment
+        |     |  |     |- x
+        |     |  |     |- is
+        |     |  |     |- APassExpression
+        |     |  |     |  `- APassExpression2
+        |     |  |     |     `- APassExpression3
+        |     |  |     |        `- APassExpression4
+        |     |  |     |           `- AIntegerOperand
+        |     |  |     |              `- 5
+        |     |  |     `- ...
+        |     |  `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Variable not found in Local Symbol Table---------- 
+Line 4, Col 7: y does not exit!
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- APassExpression4
+        |     |     |     |           `- AVariableOperand
+        |     |     |     |              `- y
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initializing a Variable with a Negative String---------- 
+Line 3, Col 7: Only a number can be negated!
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- ANegativeExpression4
+        |     |     |     |           |- -
+        |     |     |     |           `- AStringOperand
+        |     |     |     |              `- "hello"
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initializing with a String inside Parentheses---------- 
+Cannot put string or constant into parentheses
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     `- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- AParenthesisExpression3
+        |     |     |     |        |- (
+        |     |     |     |        |- APassExpression
+        |     |     |     |        |  `- APassExpression2
+        |     |     |     |        |     `- APassExpression3
+        |     |     |     |        |        `- APassExpression4
+        |     |     |     |        |           `- AStringOperand
+        |     |     |     |        |              `- "hello"
+        |     |     |     |        `- )
+        |     |     |     `- ...
+        |     |     `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initializing with Multiplication of Mismatched Types---------- 
+Line 7, Col 10: Cannot multiply int by str
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     |- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- APassExpression4
+        |     |     |     |           `- AIntegerOperand
+        |     |     |     |              `- 0
+        |     |     |     `- ...
+        |     |     `- AMultipleStatements
+        |     |        |- ADeclarationStatementStatement
+        |     |        |  `- ADeclaration
+        |     |        |     |- AStrType
+        |     |        |     |  `- str
+        |     |        |     |- y
+        |     |        |     `- ...
+        |     |        `- AMultipleStatements
+        |     |           |- AAssignStatementStatement
+        |     |           |  `- AAssignment
+        |     |           |     |- y
+        |     |           |     |- is
+        |     |           |     |- APassExpression
+        |     |           |     |  `- APassExpression2
+        |     |           |     |     `- APassExpression3
+        |     |           |     |        `- APassExpression4
+        |     |           |     |           `- AStringOperand
+        |     |           |     |              `- "hello"
+        |     |           |     `- ...
+        |     |           `- AMultipleStatements
+        |     |              `- AAssignStatementStatement
+        |     |              |  `- AAssignment
+        |     |              |     |- x
+        |     |              |     |- is
+        |     |              |     |- APassExpression
+        |     |              |     |  `- APassExpression2
+        |     |              |     |     `- AParenthesisExpression3
+        |     |              |     |        |- (
+        |     |              |     |        |- APassExpression
+        |     |              |     |        |  `- AMultiplyExpression2
+        |     |              |     |        |     |- APassExpression2
+        |     |              |     |        |     |  `- APassExpression3
+        |     |              |     |        |     |     `- APassExpression4
+        |     |              |     |        |     |        `- AVariableOperand
+        |     |              |     |        |     |           `- x
+        |     |              |     |        |     |- *
+        |     |              |     |        |     `- APassExpression3
+        |     |              |     |        |        `- APassExpression4
+        |     |              |     |        |           `- AVariableOperand
+        |     |              |     |        |              `- y
+        |     |              |     |        `- )
+        |     |              |     `- ...
+        |     |              `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initializing with Division of Mismatched Types---------- 
+Line 7, Col 10: Cannot divide int by str
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     |- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- APassExpression4
+        |     |     |     |           `- AIntegerOperand
+        |     |     |     |              `- 0
+        |     |     |     `- ...
+        |     |     `- AMultipleStatements
+        |     |        |- ADeclarationStatementStatement
+        |     |        |  `- ADeclaration
+        |     |        |     |- AStrType
+        |     |        |     |  `- str
+        |     |        |     |- y
+        |     |        |     `- ...
+        |     |        `- AMultipleStatements
+        |     |           |- AAssignStatementStatement
+        |     |           |  `- AAssignment
+        |     |           |     |- y
+        |     |           |     |- is
+        |     |           |     |- APassExpression
+        |     |           |     |  `- APassExpression2
+        |     |           |     |     `- APassExpression3
+        |     |           |     |        `- APassExpression4
+        |     |           |     |           `- AStringOperand
+        |     |           |     |              `- "hello"
+        |     |           |     `- ...
+        |     |           `- AMultipleStatements
+        |     |              `- AAssignStatementStatement
+        |     |              |  `- AAssignment
+        |     |              |     |- x
+        |     |              |     |- is
+        |     |              |     |- APassExpression
+        |     |              |     |  `- APassExpression2
+        |     |              |     |     `- AParenthesisExpression3
+        |     |              |     |        |- (
+        |     |              |     |        |- APassExpression
+        |     |              |     |        |  `- ADivideExpression2
+        |     |              |     |        |     |- APassExpression2
+        |     |              |     |        |     |  `- APassExpression3
+        |     |              |     |        |     |     `- APassExpression4
+        |     |              |     |        |     |        `- AVariableOperand
+        |     |              |     |        |     |           `- x
+        |     |              |     |        |     |- /
+        |     |              |     |        |     `- APassExpression3
+        |     |              |     |        |        `- APassExpression4
+        |     |              |     |        |           `- AVariableOperand
+        |     |              |     |        |              `- y
+        |     |              |     |        `- )
+        |     |              |     `- ...
+        |     |              `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initializing with Addition of Mismatched Types---------- 
+Line 7, Col 10: Cannot add int with str
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     |- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- APassExpression4
+        |     |     |     |           `- AIntegerOperand
+        |     |     |     |              `- 0
+        |     |     |     `- ...
+        |     |     `- AMultipleStatements
+        |     |        |- ADeclarationStatementStatement
+        |     |        |  `- ADeclaration
+        |     |        |     |- AStrType
+        |     |        |     |  `- str
+        |     |        |     |- y
+        |     |        |     `- ...
+        |     |        `- AMultipleStatements
+        |     |           |- AAssignStatementStatement
+        |     |           |  `- AAssignment
+        |     |           |     |- y
+        |     |           |     |- is
+        |     |           |     |- APassExpression
+        |     |           |     |  `- APassExpression2
+        |     |           |     |     `- APassExpression3
+        |     |           |     |        `- APassExpression4
+        |     |           |     |           `- AStringOperand
+        |     |           |     |              `- "hello"
+        |     |           |     `- ...
+        |     |           `- AMultipleStatements
+        |     |              `- AAssignStatementStatement
+        |     |              |  `- AAssignment
+        |     |              |     |- x
+        |     |              |     |- is
+        |     |              |     |- APassExpression
+        |     |              |     |  `- APassExpression2
+        |     |              |     |     `- AParenthesisExpression3
+        |     |              |     |        |- (
+        |     |              |     |        |- AAddExpression
+        |     |              |     |        |  |- APassExpression
+        |     |              |     |        |  |  `- APassExpression2
+        |     |              |     |        |  |     `- APassExpression3
+        |     |              |     |        |  |        `- APassExpression4
+        |     |              |     |        |  |           `- AVariableOperand
+        |     |              |     |        |  |              `- x
+        |     |              |     |        |  |- +
+        |     |              |     |        |  `- APassExpression2
+        |     |              |     |        |     `- APassExpression3
+        |     |              |     |        |        `- APassExpression4
+        |     |              |     |        |           `- AVariableOperand
+        |     |              |     |        |              `- y
+        |     |              |     |        `- )
+        |     |              |     `- ...
+        |     |              `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initializing with Subtraction of Mismatched Types---------- 
+Line 7, Col 10: Cannot subtract int with str
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     |- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- APassExpression4
+        |     |     |     |           `- AIntegerOperand
+        |     |     |     |              `- 0
+        |     |     |     `- ...
+        |     |     `- AMultipleStatements
+        |     |        |- ADeclarationStatementStatement
+        |     |        |  `- ADeclaration
+        |     |        |     |- AStrType
+        |     |        |     |  `- str
+        |     |        |     |- y
+        |     |        |     `- ...
+        |     |        `- AMultipleStatements
+        |     |           |- AAssignStatementStatement
+        |     |           |  `- AAssignment
+        |     |           |     |- y
+        |     |           |     |- is
+        |     |           |     |- APassExpression
+        |     |           |     |  `- APassExpression2
+        |     |           |     |     `- APassExpression3
+        |     |           |     |        `- APassExpression4
+        |     |           |     |           `- AStringOperand
+        |     |           |     |              `- "hello"
+        |     |           |     `- ...
+        |     |           `- AMultipleStatements
+        |     |              `- AAssignStatementStatement
+        |     |              |  `- AAssignment
+        |     |              |     |- x
+        |     |              |     |- is
+        |     |              |     |- APassExpression
+        |     |              |     |  `- APassExpression2
+        |     |              |     |     `- AParenthesisExpression3
+        |     |              |     |        |- (
+        |     |              |     |        |- ASubtractExpression
+        |     |              |     |        |  |- APassExpression
+        |     |              |     |        |  |  `- APassExpression2
+        |     |              |     |        |  |     `- APassExpression3
+        |     |              |     |        |  |        `- APassExpression4
+        |     |              |     |        |  |           `- AVariableOperand
+        |     |              |     |        |  |              `- x
+        |     |              |     |        |  |- -
+        |     |              |     |        |  `- APassExpression2
+        |     |              |     |        |     `- APassExpression3
+        |     |              |     |        |        `- APassExpression4
+        |     |              |     |        |           `- AVariableOperand
+        |     |              |     |        |              `- y
+        |     |              |     |        `- )
+        |     |              |     `- ...
+        |     |              `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initializing with a Type that Does Not Exist---------- 
+Line 2, Col 2: Identifier x does not exist
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  `- AAssignStatementStatement
+        |     |  |  `- AAssignment
+        |     |  |     |- x
+        |     |  |     |- is
+        |     |  |     |- APassExpression
+        |     |  |     |  `- APassExpression2
+        |     |  |     |     `- APassExpression3
+        |     |  |     |        `- APassExpression4
+        |     |  |     |           `- AIntegerOperand
+        |     |  |     |              `- 5
+        |     |  |     `- ...
+        |     |  `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 

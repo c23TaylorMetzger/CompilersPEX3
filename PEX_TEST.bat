@@ -41,6 +41,10 @@ echo ----------Initialize a Variable with Correct Subtraction---------- >> %file
 bin\Debug\ConsoleApplication.exe testcases\pex3\SubtractCorrect.txt >> %file%
 echo. >> %file%
 
+echo ----------Comparison of Integers Correct---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\ComparisonCorrect.txt >> %file%
+echo. >> %file%
+
 
 echo ---------------------------------------- >> %file%
 echo BAD EXAMPLES >> %file%
@@ -78,8 +82,12 @@ echo ----------Initializing with Subtraction of Mismatched Types---------- >> %f
 bin\Debug\ConsoleApplication.exe testcases\pex3\SubtractMismatchTypes.txt >> %file%
 echo. >> %file%
 
-echo ----------Initializing with a Type that Does Not Exist---------- >> %file%
-bin\Debug\ConsoleApplication.exe testcases\pex3\TypeDoesNotExist.txt >> %file%
+echo ----------Initializing with a Variable that Does Not Exist---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\LocalDoesNotExist.txt >> %file%
+echo. >> %file%
+
+echo ----------Initializing with a Variable that is Already Being Used---------- >> %file%
+bin\Debug\ConsoleApplication.exe testcases\pex3\LocalAlreadyUsed.txt >> %file%
 echo. >> %file%
 
 pause

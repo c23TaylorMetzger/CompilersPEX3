@@ -408,6 +408,58 @@ namespace CS426.analysis
         //---------------------------------------------
         // Subfunction Definition
         //---------------------------------------------
-        
+        public override void InAHelperDeclare(AHelperDeclare node)
+        {
+            Definition idDef;
+
+            if (globalSymbolTable.TryGetValue(node.GetId().Text, out idDef))
+            {
+                PrintWarning(node.GetId(), "Identifier " + node.GetId().Text + " is already being used");
+            }
+            else
+            {
+                localSymbolTable = new Dictionary<string, Definition>();
+
+                FunctionDefinition newFunctionDefinition = new FunctionDefinition();
+                newFunctionDefinition.name = node.GetId().Text;
+
+                newFunctionDefinition.parameters = new List<VariableDefinition>();
+
+                globalSymbolTable.Add(node.GetId().Text, newFunctionDefinition);
+            }
+        }
+
+        public override void OutAHelperDeclare(AHelperDeclare node)
+        {
+            localSymbolTable = new Dictionary<string, Definition>();
+        }
+
+        //---------------------------------------------
+        // Subfunction Definition
+        //---------------------------------------------
+        public override void OutAFunctionCall(AFunctionCall node)
+        {
+            Definition idDef;
+
+            if (!globalSymbolTable.TryGetValue(node.GetId().Text, out idDef))
+            {
+                PrintWarning(node.GetId(), "ID " + node.GetId().Text + " not found");
+            }
+            else if (!(idDef is FunctionDefinition))
+            {
+                PrintWarning(node.GetId(), "ID " + node);
+            }
+        }
+
+        //---------------------------------------------
+        // Comparison
+        //---------------------------------------------
+        public override void OutAComparison(AComparison node)
+        {
+            if (node.GetLeftHandExpression().GetType() != node.GetRightHandExpression().GetType())
+            {
+                Console.WriteLine("Cannot compare two different types");
+            }
+        }
     }
 }

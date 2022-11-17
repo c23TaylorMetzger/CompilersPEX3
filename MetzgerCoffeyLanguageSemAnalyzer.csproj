@@ -112,7 +112,9 @@
     <Content Include="testcases\pex2\function_call_correct.txt" />
     <Content Include="testcases\pex2\assign_simple_correct.txt" />
     <Content Include="testcases\pex2\declaration_correct.txt" />
-    <Content Include="testcases\pex3\TypeDoesNotExist.txt" />
+    <Content Include="testcases\pex3\LocalAlreadyUsed.txt" />
+    <Content Include="testcases\pex3\LocalDoesNotExist.txt" />
+    <Content Include="testcases\pex3\ComparisonCorrect.txt" />
     <Content Include="testcases\pex3\SubtractMismatchTypes.txt" />
     <Content Include="testcases\pex3\SubtractCorrect.txt" />
     <Content Include="testcases\pex3\AddCorrect.txt" />

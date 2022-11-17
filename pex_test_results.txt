@@ -774,7 +774,94 @@ Line 7, Col 10: Cannot subtract int with str
         `- ASingleStatements
 
  
-----------Initializing with a Type that Does Not Exist---------- 
+----------Comparison of Mismatched Types---------- 
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     |- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- APassExpression4
+        |     |     |     |           `- AIntegerOperand
+        |     |     |     |              `- 0
+        |     |     |     `- ...
+        |     |     `- AMultipleStatements
+        |     |        |- ADeclarationStatementStatement
+        |     |        |  `- ADeclaration
+        |     |        |     |- AStrType
+        |     |        |     |  `- str
+        |     |        |     |- y
+        |     |        |     `- ...
+        |     |        `- AMultipleStatements
+        |     |           |- AAssignStatementStatement
+        |     |           |  `- AAssignment
+        |     |           |     |- y
+        |     |           |     |- is
+        |     |           |     |- APassExpression
+        |     |           |     |  `- APassExpression2
+        |     |           |     |     `- APassExpression3
+        |     |           |     |        `- APassExpression4
+        |     |           |     |           `- AStringOperand
+        |     |           |     |              `- "hello"
+        |     |           |     `- ...
+        |     |           `- AMultipleStatements
+        |     |              `- ABranchingStatementStatement
+        |     |              |  `- ABranch
+        |     |              |     |- if
+        |     |              |     |- AIfCurls
+        |     |              |     |  |- {
+        |     |              |     |  |- ASingleLogicalExpressionLogical
+        |     |              |     |  |  `- AComparison
+        |     |              |     |  |     |- APassExpression
+        |     |              |     |  |     |  `- APassExpression2
+        |     |              |     |  |     |     `- APassExpression3
+        |     |              |     |  |     |        `- APassExpression4
+        |     |              |     |  |     |           `- AVariableOperand
+        |     |              |     |  |     |              `- x
+        |     |              |     |  |     |- AEqualOperator
+        |     |              |     |  |     |  `- =
+        |     |              |     |  |     `- APassExpression
+        |     |              |     |  |        `- APassExpression2
+        |     |              |     |  |           `- APassExpression3
+        |     |              |     |  |              `- APassExpression4
+        |     |              |     |  |                 `- AVariableOperand
+        |     |              |     |  |                    `- y
+        |     |              |     |  `- }
+        |     |              |     |- AIfSquares
+        |     |              |     |  `- [
+        |     |              |     |  |- ASingleStatements
+        |     |              |     |  `- ]
+        |     |              |     |- then
+        |     |              |     `- AThenSquares
+        |     |              |        `- [
+        |     |              |        |- ASingleStatements
+        |     |              |        `- ]
+        |     |              `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Initializing with a Variable that Does Not Exist---------- 
 Line 2, Col 2: Identifier x does not exist
 
 - AProgram
@@ -802,5 +889,77 @@ Line 2, Col 2: Identifier x does not exist
         |     |  `- ASingleStatements
         |     `- ]
         `- ASingleStatements
+
+ 
+----------Initializing with a Variable that is Already Being Used---------- 
+Line 5, Col 6: Identifier x is already being used
+
+- AProgram
+     `- AMultipleStatements
+        `- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     |- [
+        |     |- AMultipleStatements
+        |     |  |- ADeclarationStatementStatement
+        |     |  |  `- ADeclaration
+        |     |  |     |- AIntType
+        |     |  |     |  `- int
+        |     |  |     |- x
+        |     |  |     `- ...
+        |     |  `- AMultipleStatements
+        |     |     |- AAssignStatementStatement
+        |     |     |  `- AAssignment
+        |     |     |     |- x
+        |     |     |     |- is
+        |     |     |     |- APassExpression
+        |     |     |     |  `- APassExpression2
+        |     |     |     |     `- APassExpression3
+        |     |     |     |        `- APassExpression4
+        |     |     |     |           `- AIntegerOperand
+        |     |     |     |              `- 5
+        |     |     |     `- ...
+        |     |     `- AMultipleStatements
+        |     |        `- ADeclarationStatementStatement
+        |     |        |  `- ADeclaration
+        |     |        |     |- AIntType
+        |     |        |     |  `- int
+        |     |        |     |- x
+        |     |        |     `- ...
+        |     |        `- ASingleStatements
+        |     `- ]
+        `- ASingleStatements
+
+ 
+----------Declaring a Function that is Already Being Used---------- 
+
+- AProgram
+     `- AMultipleStatements
+        |- AMainFunctionDeclareStatement
+        |  `- AMainDeclare
+        |     |- nucleus
+        |     `- {
+        |     |- ASingleParameters
+        |     |  `- AEmptyParameter
+        |     |- }
+        |     `- [
+        |     |- ASingleStatements
+        |     `- ]
+        `- AMultipleStatements
+           `- AMainFunctionDeclareStatement
+           |  `- AMainDeclare
+           |     |- nucleus
+           |     `- {
+           |     |- ASingleParameters
+           |     |  `- AEmptyParameter
+           |     |- }
+           |     `- [
+           |     |- ASingleStatements
+           |     `- ]
+           `- ASingleStatements
 
  
